@@ -22,4 +22,6 @@ This project aims to develop drivers for the UART protocol using bare-metal C co
 ## Software Requirements
 1. STM32Cube IDE
 2. STM32CubeF4 package (For CMSIS)
-3. Serial terminal application (e.g., PuTTY, RealTerm)
+3. Serial terminal application (e.g. RealTerm)
+
+
