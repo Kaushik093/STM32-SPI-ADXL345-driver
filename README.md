@@ -1,13 +1,6 @@
 
 # STM32-UART-Drivers
 
-## Table of Contents
-
-1. [Overview](#overview)
-2. [Hardware Requirements](#hardware-requirements)
-3. [Software Requirements](#software-requirements)
-
-
 ## Overview
 This project aims to develop drivers for the UART protocol using bare-metal C code for transmitting and receiving data between an STM32 microcontroller and a personal computer.
 
