@@ -6,10 +6,8 @@
 1. [Overview](#overview)
 2. [Hardware Requirements](#hardware-requirements)
 3. [Software Requirements](#software-requirements)
-4. [Configuration](#Configuration)
-5. [Code Description](#Code-description)
-6. [Usage](#Usage)
-
+4. [Developing and testing the transmitter driver](#developing-and-testing-the-transmitter-driver)
+5. [Developing and testing the receiver driver](#developing-and-testing-the-receiver-driver)
 
 ## Overview
 This project aims to develop drivers for the UART protocol using bare-metal C code for transmitting and receiving data between an STM32 microcontroller and a personal computer.
@@ -24,4 +22,7 @@ This project aims to develop drivers for the UART protocol using bare-metal C co
 2. STM32CubeF4 package (For CMSIS)
 3. Serial terminal application (e.g. RealTerm)
 
+## Developing and testing the transmitter driver
 
+
+## Developing and testing the receiver driver
