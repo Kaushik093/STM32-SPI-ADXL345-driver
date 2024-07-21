@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # STM32-UART-Drivers
 
@@ -17,3 +18,6 @@ This project aims to develop drivers for the UART protocol using bare-metal C co
 
 
 
+=======
+# STM32-ADXL345-I2C-Driver
+>>>>>>> d17b67b1b689cec7abf24e95b9a30131a734c23d
