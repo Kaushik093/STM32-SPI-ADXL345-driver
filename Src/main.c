@@ -1,34 +1,28 @@
-#include <stdio.h>
-#include <uart.h>
+#include <adxl.h>
 
-#define GPIOAEN		(1U<<0)
-#define GPIOA_5		(1U<<5)
-#define LED_PIN		GPIOA_5
+int16_t x,y,z;
+double xg, yg, zg;
 
-char key;
+extern uint8_t data_rec[6];
 
-int main(void){
+int main(void)
+{
 
-	//Enable clock access to GPIOA
-	RCC->AHB1ENR |= GPIOAEN;
 
-	//Set PA5 as output pin
-	GPIOA->MODER |= (1U<<10);
-	GPIOA->MODER &= ~(1U<<11);
+	adxl_init();
 
-	uart2_rxtx_init();
+	while(1)
+	{
+		adxl_read_values (DATA_START_ADDR);
 
-	while(1){
+		 x = ((data_rec[1]<<8)|data_rec[0]);
+		 y = ((data_rec[3]<<8)|data_rec[2]);
+		 z = ((data_rec[5]<<8)|data_rec[4]);
 
-		key = uart_receive();
+		xg = (x * 0.0078);
+		yg = (y * 0.0078);
+		zg = (z * 0.0078);
 
-		if(key == '1'){
-			GPIOA->ODR |= LED_PIN;
-		}
-		else{
-			GPIOA->ODR &= ~LED_PIN;
-
-		}
-//		printf("Hello I am Kaushik \n\r");
 	}
+
 }

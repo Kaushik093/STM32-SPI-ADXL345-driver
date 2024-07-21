@@ -1,0 +1,4 @@
+../Src/adxl.c:6:6:adxl_init	8	static
+../Src/adxl.c:24:6:adxl_read_values	16	static
+../Src/adxl.c:31:6:adxl_read_address	16	static
+../Src/adxl.c:37:6:adxl_write	24	static
