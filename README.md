@@ -105,3 +105,6 @@ The software must ensure that the TXE flag is set to 1 before attempting to writ
 3. Send address.
 4. Read data (6 bytes).
 5. Pull CS high.
+
+## ADXL345-SPI API Interaction Sequence
+https://github.com/user-attachments/assets/309dea9d-4dad-4847-bcaf-a9be3405ab2c
