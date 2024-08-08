@@ -107,4 +107,4 @@ The software must ensure that the TXE flag is set to 1 before attempting to writ
 5. Pull CS high.
 
 ## ADXL345-SPI API Interaction Sequence
-https://github.com/user-attachments/assets/309dea9d-4dad-4847-bcaf-a9be3405ab2c
+![I2C_Sequence](https://github.com/user-attachments/assets/309dea9d-4dad-4847-bcaf-a9be3405ab2c)
