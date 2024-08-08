@@ -1,43 +1,65 @@
 #include <adxl.h>
+#include <spi.h>
 
-char data;
-uint8_t data_rec[6];
+#define   MULTI_BYTE_EN				0x40  //01000000
+#define	  READ_OPERATION		    0x80
 
-void adxl_init (void)
-{
-	//Enable I2C
-	i2c1_init();
+void adxl_init(){
 
-	//Read DEVID
-	adxl_read_address(DEVID_R);
+	//Initialize SPI1 GPIO
+	spi1_gpio_init();
 
-	//Set data format to +/-4g
+	//Initialize SPI1
+	spi1_init();
+
+	/*Configure ADXL345*/
+
+	//Set data format range to +-4g//
 	adxl_write (DATA_FORMAT_R, FOUR_G);
 
-	//Reset all bits
+//	//Reset all bits//
 	adxl_write (POWER_CTL_R, RESET);
 
-	//Configure power control to set measure bit
+	//Configure power control measure bit//
 	adxl_write (POWER_CTL_R, SET_MEASURE_B);
 }
 
-void adxl_read_values (uint8_t reg)
+void adxl_read(uint8_t memAddr, uint8_t *data)
 {
-	i2c1_burst_read(DEVICE_ADDR, reg, 6,(char *)data_rec);
+
+	//Set R-bit & multi-byte
+	memAddr |= READ_OPERATION;
+
+	memAddr |= MULTI_BYTE_EN;
+
+	//Pull CS low
+	cs_enable();
+
+	//Send memory address
+	spi1_write(&memAddr,1);
+
+	//Call spi1_read()
+	spi1_read(data,6);
+
+	//Pull CS high
+	cs_disable();
 
 }
 
-
-void adxl_read_address(uint8_t reg){
-
-	i2c1_byte_read(DEVICE_ADDR,reg,&data);
-
-}
-
-void adxl_write (uint8_t reg, char value)
+void adxl_write(uint8_t memAddr, uint8_t data)
 {
-	char data[1];
-	data[0] = value;
+	uint8_t data_array[2];
 
-	i2c1_burst_write(DEVICE_ADDR, reg,1,data) ;
+	data_array[0] = memAddr|MULTI_BYTE_EN;
+	data_array[1] = data;
+
+	//Pull CS low
+	cs_enable();
+
+	//Call Write function
+	spi1_write(data_array,2);
+
+	//Pull CS high
+	cs_disable();
+
 }
