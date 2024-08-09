@@ -1,17 +1,21 @@
 =======
 # STM32-ADXL345-SPI-Driver
 
+## Table of contents
+1. [Objective](objective)
+2. [Hardware](hardware)
+  1. [SPI-MCU pin mapping](spi-mcu-pin-mapping)
+     
+
 ## Objective 
 Design an API that can be used to configure an ADXL345 Accelerometer and read data from it using the SPI protocol.
 
-### Hardware
-
-1. MCU: STM32F401RE Nucleo development board.
-2. Peripheral: ADXL345 Accelerometer.
+## Hardware
+1. **MCU (Microcontroller unit)**: STM32F401RE Nucleo development board.
+2. **Peripheral**: ADXL345 Accelerometer.
 
 ### SPI-MCU pin mapping 
-
-| SPI Pin       | GPIO Pin      |
+| SPI Pin       | MCU GPIO Pin      |
 | ------------- | ------------- |
 | NSS           | PA4 (A2)  |
 | SCK          | PA5 (D13)  |
@@ -19,8 +23,7 @@ Design an API that can be used to configure an ADXL345 Accelerometer and read da
 | MOSI          | PA7 (D11)  |
 
 ### ADXL345-MCU Connections
-
-| ADXL345       | STM32      |
+| ADXL345       | MCU GPIO Pin      |
 | ------------- | ------------- |
 | CS            | PA4 (A2)  |
 | SCL          | PA5 (D13)  |
