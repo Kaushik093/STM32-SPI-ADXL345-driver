@@ -6,9 +6,9 @@
 2. [Hardware](#hardware)
   1. [SPI-MCU pin mapping](#spi-mcu-pin-mapping)
   2. [ADXL345-MCU Connections](#adxl345-mcu-connections)
-3.[SPI API Design](#spi-api-design)
-4.[ADXL345 API Design](#adxl345-api-design)
-5.[SPI-ADXL345 API interaction sequence diagram](#spi-adxl345-api-interaction-sequence-diagram)
+3. [SPI API Design](#spi-api-design)
+4. [ADXL345 API Design](#adxl345-api-design)
+5. [SPI-ADXL345 API interaction sequence diagram](#spi-adxl345-api-interaction-sequence-diagram)
      
 
 ## Objective 
@@ -112,5 +112,5 @@ The software must ensure that the TXE flag is set to 1 before attempting to writ
 4. Read data (6 bytes).
 5. Pull CS high.
 
-## ADXL345-SPI API Interaction Sequence
+## SPI-ADXL345 API interaction sequence diagram
 ![I2C_Sequence](https://github.com/user-attachments/assets/309dea9d-4dad-4847-bcaf-a9be3405ab2c)
