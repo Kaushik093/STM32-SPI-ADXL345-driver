@@ -5,6 +5,10 @@
 1. [Objective](#objective)
 2. [Hardware](#hardware)
   1. [SPI-MCU pin mapping](#spi-mcu-pin-mapping)
+  2. [ADXL345-MCU Connections](#adxl345-mcu-connections)
+3.[SPI API Design](#spi-api-design)
+4.[ADXL345 API Design](#adxl345-api-design)
+5.[SPI-ADXL345 API interaction sequence diagram](#spi-adxl345-api-interaction-sequence-diagram)
      
 
 ## Objective 
