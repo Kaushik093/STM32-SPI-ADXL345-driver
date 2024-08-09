@@ -2,9 +2,9 @@
 # STM32-ADXL345-SPI-Driver
 
 ## Table of contents
-1. [Objective](objective)
-2. [Hardware](hardware)
-  1. [SPI-MCU pin mapping](spi-mcu-pin-mapping)
+1. [Objective](#objective)
+2. [Hardware](#hardware)
+  1. [SPI-MCU pin mapping](#spi-mcu-pin-mapping)
      
 
 ## Objective 
