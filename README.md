@@ -1,4 +1,3 @@
-
 =======
 # STM32-ADXL345-SPI-Driver
 
@@ -43,9 +42,9 @@ Alternate function for GPIO: AF05
 3. Enable Clock access for SPI1 module. (APB2 bus).
 4. Set it to master.
 5. Set data size.
-6. Set CPOL = 1 and CPHA = 1 (Refer to peripheral datasheet for this configuration).
+6. Set *CPOL = 1 and CPHA = 1* (Refer to peripheral datasheet for this configuration).
 7. Set MSB first. 
-8. Set clock frequency.
+8. Set clock frequency (freq_periph/4).
 9. Set NSS to software slave management. 
 10. Enable SPI1.
 
@@ -55,11 +54,11 @@ Arguments
 2. Data size (Number of bytes).
 
 #### Code design
-Check if the bus is busy.
-Ensure that TXE is set to 1.
-Write the first data item to transmit to the DR register. 
-Wait until TXE=1 and write the second data item to be transmitted. 
-After all data items are written ensure that TXE=1, Bus is free and clear OVR flag.
+1. Check if the bus is busy.
+2. Ensure that TXE is set to 1.
+3. Write the first data item to transmit to the DR register. 
+4. Wait until TXE=1 and write the second data item to be transmitted. 
+5. After all data items are written ensure that TXE=1, Bus is free and clear OVR flag.
 
 The software must ensure that the TXE flag is set to 1 before attempting to write to the Tx buffer. Otherwise, it overwrites the data previously written to the Tx buffer.
 
