@@ -9,7 +9,8 @@
 3. [SPI API Design](#spi-api-design)
 4. [ADXL345 API Design](#adxl345-api-design)
 5. [SPI-ADXL345 API interaction sequence diagram](#spi-adxl345-api-interaction-sequence-diagram)
-     
+
+![Model](https://github.com/Kaushik093/STM32-ADXL345-I2C-Driver/blob/main/I2C_Sequence.png)
 
 ## Objective 
 Design an API that can be used to configure an ADXL345 Accelerometer and read data from it using the SPI protocol.
