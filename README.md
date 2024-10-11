@@ -7,6 +7,9 @@
 
 ![Model](https://github.com/Kaushik093/STM32-ADXL345-I2C-Driver/blob/main/I2C_Sequence.png)
 
+![Model](https://github.com/Kaushik093/STM32-SPI-ADXL345-driver/blob/main/SPI_Sequence.png)
+
+
 ## Objective 
 Design a driver that can be used to configure an ADXL345 Accelerometer and read data from it using the SPI protocol.
 
